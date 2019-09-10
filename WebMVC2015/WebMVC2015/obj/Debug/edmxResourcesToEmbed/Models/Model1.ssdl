@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ArticleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Article_Title" Type="varchar" MaxLength="50" />
+    <Property Name="Article_Content" Type="varchar" MaxLength="50" />
+    <Property Name="Article_Create_time" Type="datetime" Nullable="false" />
+    <Property Name="Article_Modify_time" Type="datetime" Nullable="false" />
+    <Property Name="create_user_name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="ArticleModelStoreContainer">
+    <EntitySet Name="Article" EntityType="Self.Article" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

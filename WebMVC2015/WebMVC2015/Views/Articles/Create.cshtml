@@ -1,0 +1,48 @@
+﻿
+
+<h2>Create</h2>
+
+
+<form action="/Articles/Create" method="post">
+    @Html.AntiForgeryToken()
+     <div class="form-horizontal">
+        <h4>Article</h4>
+        <hr />
+
+        @*<div class="form-group">
+            <label class="control-label col-md-2" for="create_user_name">create_user_name</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="create_user_name" name="create_user_name" type="text" value="" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="create_user_name" data-valmsg-replace="true"></span>
+            </div>
+        </div>*@
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Article_Title">標題</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="Article_Title" name="Article_Title" type="text" value="" required="required"/>
+                <span class="field-validation-valid text-danger" data-valmsg-for="Article_Title" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Article_Content">內文</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="Article_Content" name="Article_Content" type="text" value="" required="required"/>
+                <span class="field-validation-valid text-danger" data-valmsg-for="Article_Content" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    <a href="/">Back to List</a>
+</div>

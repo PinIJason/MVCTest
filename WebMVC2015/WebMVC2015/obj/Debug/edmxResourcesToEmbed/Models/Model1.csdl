@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ArticleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Article_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Article_Content" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Article_Create_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Article_Modify_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="create_user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="ArticleEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Article" EntityType="Self.Article" />
+  </EntityContainer>
+</Schema>

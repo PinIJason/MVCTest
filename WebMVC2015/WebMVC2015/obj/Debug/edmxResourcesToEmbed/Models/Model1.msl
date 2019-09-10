@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ArticleModelStoreContainer" CdmEntityContainer="ArticleEntities">
+    <EntitySetMapping Name="Article">
+      <EntityTypeMapping TypeName="ArticleModel.Article">
+        <MappingFragment StoreEntitySet="Article">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Article_Title" ColumnName="Article_Title" />
+          <ScalarProperty Name="Article_Content" ColumnName="Article_Content" />
+          <ScalarProperty Name="Article_Create_time" ColumnName="Article_Create_time" />
+          <ScalarProperty Name="Article_Modify_time" ColumnName="Article_Modify_time" />
+          <ScalarProperty Name="create_user_name" ColumnName="create_user_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

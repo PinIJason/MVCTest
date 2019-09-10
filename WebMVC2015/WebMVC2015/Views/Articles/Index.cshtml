@@ -1,0 +1,56 @@
+﻿<h2>Index</h2>
+
+<p>
+    <a href="/Articles/Create">Create New</a>
+</p>
+<div ng-app="myApp" ng-controller="customersCtrl">
+
+    <table class="table">
+        <tr>
+            <th>
+                作者
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Content
+            </th>
+            
+            <th>
+                Modify_time
+            </th>
+            <th></th>
+        </tr>
+
+        <tr ng-repeat="x in names">
+            <td>
+                {{x.create_user_name}}
+            </td>
+            <td>
+                {{x.Article_Title}}
+            </td>
+            <td>
+                {{x.Article_Content}}
+            </td>
+            <td>
+                {{x.Article_Modify_time}}
+            </td>
+            <td ng-if="x.isCurrentMember == true ">
+                <a href="/Articles/Edit/{{x.ID}}">Edit</a> |
+                <a href="/Articles/Delete/{{x.ID}}">Delete</a>
+            </td>
+        </tr>
+
+    </table>
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    //app.controller('customersCtrl', function ($scope, $http) {
+    //    $http.get("/Articles/Get_data")
+    //    .then(function (response) { $scope.names = response.data; });
+    //});
+    app.controller('customersCtrl', function ($scope, $http) {
+        $scope.names = JSON.parse('@ViewBag.Data');
+    });
+</script>
